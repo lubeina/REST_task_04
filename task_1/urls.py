@@ -24,6 +24,7 @@ from flights import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('flights/', views.FlightsList.as_view(), name="flights-list"),
+    path('register/', views.RegisterAPIView.as_view(), name="register"),
     
     path('bookings/', views.BookingsList.as_view(), name="bookings-list"), 
     path('booking/<int:booking_id>/', views.BookingDetails.as_view(), name="booking-details"),
